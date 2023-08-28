@@ -8,7 +8,7 @@
 
 
 
-#define differentiate "\n\t\r "
+#define differentiate "\r\t\n"
 
 
 

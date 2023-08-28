@@ -10,12 +10,12 @@ void dl_pop_stack(stack_t **arg_compile, unsigned int _idx_count)
 	stack_t *var_pnt;
 	if (arg_compile == NULL)
 	{
-	printf("L%u: can't pop an empty arg_compile\n", _idx_count);
+	printf("L%u: can't pop an empty stack\n", _idx_count);
 	exit(EXIT_FAILURE);
 	}
 	else if (*arg_compile == NULL)
 	{
-	printf("L%u: can't pop an empty arg_compile\n", _idx_count);
+	printf("L%u: can't pop an empty stack\n", _idx_count);
 	exit(EXIT_FAILURE);
 	}
 	else

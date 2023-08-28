@@ -26,7 +26,7 @@ int dl_stack_opc(stack_t **arg_compile, char *stack_functionality, int _idx_coun
 	return (EXIT_SUCCESS);
 	}
 	}
-	fprintf(stderr, "L%d: unknown instruction %s\n", _idx_count, stack_functionality);
+	fprintf(stderr, "L%d: Argument incorrect %s\n", _idx_count, stack_functionality);
 	exit(EXIT_FAILURE);
 }
 
@@ -48,13 +48,13 @@ int main(__attribute__((unused)) int argc, char const *argv[])
 
 	if (argc != 2)
 	{
-	fprintf(stderr, "USAGE: monty file\n");
+	fprintf(stderr, "Monty file usage\n");
 	return (EXIT_FAILURE);
 	}
 	var_pnt = fopen(argv[1], "r");
 	if (var_pnt == NULL)
 	{
-	fprintf(stderr, "Error: can't open file %s\n", argv[1]);
+	fprintf(stderr, "Error: file cannot be accessed %s\n", argv[1]);
 	exit(1);
 	}
 	while ((getline(&_pnt, &sm_v, var_pnt)) != -1)

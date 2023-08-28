@@ -15,12 +15,12 @@ void fun_psh(stack_t **arg_compile, char *char_var, unsigned int _idx_count)
 	fhs = malloc(sizeof(stack_t));
 	if (fhs == NULL)
 	{
-		fprintf(stderr, "Error: malloc failed\n");
+		fprintf(stderr, "Memory Allocation failed\n");
 		exit(EXIT_FAILURE);
 	}
 	if (char_var == NULL)
 	{
-		fprintf(stderr, "L%d: usage: fun_psh integer\n", _idx_count);
+		fprintf(stderr, "L%d: Push usage\n", _idx_count);
 		exit(EXIT_FAILURE);
 	}
 	for (int_var = 0; char_var[int_var]; int_var++)
@@ -29,7 +29,7 @@ void fun_psh(stack_t **arg_compile, char *char_var, unsigned int _idx_count)
 			continue;
 		if (char_var[int_var] < 48 || char_var[int_var] > 57)
 		{
-			fprintf(stderr, "L%d: usage: fun_psh integer\n", _idx_count);
+			fprintf(stderr, "L%d: Error\n", _idx_count);
 			exit(EXIT_FAILURE);
 		}
 	}

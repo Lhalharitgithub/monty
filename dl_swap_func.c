@@ -12,7 +12,7 @@ void dl_swap_stack(stack_t **arg_compile, unsigned int _idx_count)
 
 	if (dl_size(arg_compile) < 2)
 	{
-		fprintf(stderr, "L%d: can't dl_swap_stack, arg_compile too short\n", _idx_count);
+		fprintf(stderr, "L%d: can't swap, stack too short\n", _idx_count);
 		exit(EXIT_FAILURE);
 	}
 	var = (*arg_compile)->n;
